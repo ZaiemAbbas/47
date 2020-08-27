@@ -57,6 +57,7 @@ public class GameplayManager : MonoBehaviour
         return playerTurn;
     }
 
+    //  assign army
     private void SetPlayerArmy()
     {
         for(int i=0;i<player.Length;i++)
