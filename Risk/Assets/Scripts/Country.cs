@@ -5,9 +5,13 @@ using UnityEngine;
 [System.Serializable]   //  to show on inspector
 public class Country 
 {
-
+    public int M_ID;
     public string name;
-    
+    public List<CountryHandler> Hamsay;
+    //public void AddButton()
+    //{
+    //    Hamsay.Add();
+    //}
     public enum thecontinent
     {
         NorthAmerica,
@@ -26,10 +30,12 @@ public class Country
         HariSingh,
         LionHeart
     }
+
+
     public thecontinent continent;
     public theTribes tribe;
     public int moneyreward;
     public int expreward;
     public int army = 0;
-    public int player = 0;
+    public int playerID = 0;
 }

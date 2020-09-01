@@ -25,17 +25,19 @@ public class CountryHandler : MonoBehaviour
 
         if(GameplayManager.Instance.phase == 1 && selected == false)
         {
-            Country countryObj = OnGetTribe(GameplayManager.Instance.PlayerTurn());
+            Country countryObj = OnGetTribe(GameplayManager.Instance.Phase1Turn());
             AssignColor(countryObj);
             selected = true;
         }
 
         if (GameplayManager.Instance.phase == 2)
         {
-            if (GameplayManager.Instance.PlayerTurn() != country.player)
+            if (GameplayManager.Instance.GetCurrentPlayer() != country.playerID)
                 return;
 
             country.army++;
+
+            GameplayManager.Instance.Phase2Turn();
 
             if (GetComponentInChildren<TextMeshPro>())
                 GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
@@ -44,7 +46,7 @@ public class CountryHandler : MonoBehaviour
 
     private Country OnGetTribe(int turn)
     {
-        country.player = turn;
+        country.playerID = turn;
 
         switch (turn)
         {

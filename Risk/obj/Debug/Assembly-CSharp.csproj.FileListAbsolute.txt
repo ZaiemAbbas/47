@@ -1,0 +1,1 @@
+C:\Unity\Git\Risk\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache

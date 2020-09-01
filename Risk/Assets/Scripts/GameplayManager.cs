@@ -13,7 +13,7 @@ public class GameplayManager : MonoBehaviour
     public int phase = 1;
 
     private int playerTurn = 0;
-    private int remainingLands = 5;
+    private int remainingLands = 8;
 
     [System.Serializable]
     public struct Player
@@ -30,26 +30,41 @@ public class GameplayManager : MonoBehaviour
     {
         Instance = this;
         phase = 1;
+        playerTurnText.text = "1";
     }
 
-    public int PlayerTurn()
+    public int Phase1Turn()
     {
         if (playerTurn >= 4)
             playerTurn = 1;
         else
             playerTurn++;
 
-        playerTurnText.text = playerTurn.ToString();
+        playerTurnText.text = (playerTurn+1).ToString();
 
         if (phase == 1)
         {
+            // Entring to phase 2
             if (remainingLands <= 0)
+            {
                 phase = 2;
+
+                //  Function to assign total army to all players
+                SetPlayerArmy();
+            }
             else
                 remainingLands--;
         }
 
         return playerTurn;
+    }
+
+    public void Phase2Turn()
+    {
+        if (playerTurn >= 4)
+            playerTurn = 1;
+        else
+            playerTurn++;
     }
 
     public int GetCurrentPlayer()
@@ -62,8 +77,9 @@ public class GameplayManager : MonoBehaviour
     {
         for(int i=0;i<player.Length;i++)
         {
-            player[i].armyCount = 13;
+            player[i].armyCount = 5;
             player[i].armyText.text = player[i].armyCount.ToString();
+            
         }
     }
 

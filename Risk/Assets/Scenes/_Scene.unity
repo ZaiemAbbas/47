@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &32196597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ Transform:
   m_Children:
   - {fileID: 978601457}
   m_Father: {fileID: 89722330}
-  m_RootOrder: 39
+  m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &45233082
 PolygonCollider2D:
@@ -492,13 +492,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 41
     name: m41
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -527,7 +529,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &45364023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -795,7 +797,7 @@ Transform:
   m_Children:
   - {fileID: 1061007366}
   m_Father: {fileID: 89722330}
-  m_RootOrder: 40
+  m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &61175677
 PolygonCollider2D:
@@ -870,13 +872,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 40
     name: m40
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -1025,13 +1029,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 22
     name: m22
+    Hamsay:
+    - {fileID: 213788512}
+    - {fileID: 2068557056}
+    - {fileID: 1109965966}
+    - {fileID: 1410041488}
     continent: 4
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -1058,7 +1068,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &87504577
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1092,7 +1102,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0
+  m_Text: '1
+
+'
 --- !u!222 &87504578
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1186,8 +1198,8 @@ Transform:
   - {fileID: 896635888}
   - {fileID: 672405906}
   - {fileID: 673048696}
-  - {fileID: 45233081}
   - {fileID: 61175676}
+  - {fileID: 45233081}
   - {fileID: 1742130094}
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -1211,7 +1223,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &105780293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1418,7 +1430,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &107712806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1625,7 +1637,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &133335322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1971,13 +1983,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 25
     name: m25
+    Hamsay:
+    - {fileID: 1109965966}
+    - {fileID: 1960839837}
+    - {fileID: 1731067809}
     continent: 4
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -2145,13 +2162,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 20
     name: m20
+    Hamsay:
+    - {fileID: 2073315371}
+    - {fileID: 245011808}
+    - {fileID: 1381237549}
+    - {fileID: 2068557056}
+    - {fileID: 75471480}
+    - {fileID: 1410041488}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -2304,13 +2329,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 18
     name: m18
+    Hamsay:
+    - {fileID: 1178244616}
+    - {fileID: 1286940192}
+    - {fileID: 2073315371}
+    - {fileID: 1381237549}
+    - {fileID: 213788512}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -2470,13 +2502,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 32
     name: m32
+    Hamsay: []
     continent: 5
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -2629,13 +2663,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 29
     name: m29
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -2664,7 +2700,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &284439664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2871,7 +2907,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &295836430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3226,13 +3262,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 12
     name: m12
+    Hamsay:
+    - {fileID: 2014009616}
+    - {fileID: 1184799136}
+    - {fileID: 1927416670}
+    - {fileID: 2068557056}
     continent: 1
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -3261,7 +3303,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &373061101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3468,7 +3510,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &420175556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3675,7 +3717,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &458359332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4022,7 +4064,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &509439133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4311,7 +4353,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &639729931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4650,13 +4692,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 38
     name: m38
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -4814,13 +4858,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 39
     name: m39
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -4849,7 +4895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &690112310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5056,7 +5102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &769176503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5263,7 +5309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &769586293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5470,7 +5516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &778089460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5677,7 +5723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &816253357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5882,7 +5928,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &839949204
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5963,7 +6009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &860734760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6324,13 +6370,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 37
     name: m37
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -6438,7 +6486,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &939809306
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6645,7 +6693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &978601457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6852,7 +6900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1033738168
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7059,7 +7107,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1061007366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7266,7 +7314,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1083714587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7473,7 +7521,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1099492015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7826,13 +7874,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 7
     name: m7
+    Hamsay:
+    - {fileID: 1367496560}
+    - {fileID: 1364596279}
+    - {fileID: 1812267326}
+    - {fileID: 1323796890}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -7995,13 +8049,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 23
     name: m23
+    Hamsay:
+    - {fileID: 2068557056}
+    - {fileID: 75471480}
+    - {fileID: 1960839837}
+    - {fileID: 174520423}
+    - {fileID: 1731067809}
+    - {fileID: 1410041488}
     continent: 4
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -8030,7 +8092,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1123257714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8376,13 +8438,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 36
     name: m36
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -8545,13 +8609,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 15
     name: m15
+    Hamsay:
+    - {fileID: 1323796890}
+    - {fileID: 1286940192}
+    - {fileID: 245011808}
+    - {fileID: 1381237549}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -8709,13 +8779,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 34
     name: m34
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -8876,13 +8948,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 11
     name: m11
+    Hamsay:
+    - {fileID: 2014009616}
+    - {fileID: 366004943}
+    - {fileID: 1927416670}
     continent: 1
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -9040,13 +9117,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 33
     name: m33
+    Hamsay: []
     continent: 5
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -9075,7 +9154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1235209368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9414,13 +9493,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 9
     name: m9
+    Hamsay:
+    - {fileID: 1502741361}
+    - {fileID: 1916736147}
+    - {fileID: 2014009616}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -9590,13 +9674,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 35
     name: m35
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -9756,13 +9842,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 16
     name: m16
+    Hamsay:
+    - {fileID: 1323796890}
+    - {fileID: 1178244616}
+    - {fileID: 2073315371}
+    - {fileID: 245011808}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -9905,13 +9997,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 14
     name: m14
+    Hamsay:
+    - {fileID: 1103656301}
+    - {fileID: 1178244616}
+    - {fileID: 1178244616}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -9940,7 +10037,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1337088283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10147,7 +10244,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1354026342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10465,13 +10562,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 3
     name: m3
+    Hamsay:
+    - {fileID: 1751653864}
+    - {fileID: 1367496560}
+    - {fileID: 1502741361}
+    - {fileID: 1566475789}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -10630,13 +10733,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 2
     name: m2
+    Hamsay:
+    - {fileID: 1751653864}
+    - {fileID: 1364596279}
+    - {fileID: 1566475789}
+    - {fileID: 1103656301}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -10796,13 +10905,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 19
     name: m19
+    Hamsay:
+    - {fileID: 1178244616}
+    - {fileID: 245011808}
+    - {fileID: 1381237549}
+    - {fileID: 213788512}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -10981,13 +11096,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 27
     name: m27
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -11014,7 +11131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1438263096
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11095,7 +11212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1478219562
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11418,13 +11535,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 4
     name: m4
+    Hamsay:
+    - {fileID: 1364596279}
+    - {fileID: 1566475789}
+    - {fileID: 1916736147}
+    - {fileID: 1238897872}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -11453,7 +11576,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1506031997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11658,7 +11781,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1537286186
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11782,7 +11905,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1543667295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12006,13 +12129,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 5
     name: m5
+    Hamsay:
+    - {fileID: 1367496560}
+    - {fileID: 1364596279}
+    - {fileID: 1502741361}
+    - {fileID: 1812267326}
+    - {fileID: 1103656301}
+    - {fileID: 1916736147}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -12041,7 +12172,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1679592423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12248,7 +12379,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1695916106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12453,7 +12584,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1714457521
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12649,13 +12780,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 26
     name: m26
+    Hamsay:
+    - {fileID: 1109965966}
+    - {fileID: 174520423}
     continent: 4
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -12811,13 +12946,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 42
     name: m42
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -12984,13 +13121,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 28
     name: m28
+    Hamsay: []
     continent: 2
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -13152,13 +13291,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 1
     name: m1
+    Hamsay:
+    - {fileID: 1367496560}
+    - {fileID: 1364596279}
+    - {fileID: 45233083}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -13187,7 +13331,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1756171490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13473,7 +13617,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1775462619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13680,7 +13824,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1802734104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14026,13 +14170,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 6
     name: m6
+    Hamsay:
+    - {fileID: 1566475789}
+    - {fileID: 1103656301}
+    - {fileID: 1916736147}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -14210,13 +14359,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 31
     name: m31
+    Hamsay: []
     continent: 5
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -14245,7 +14396,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1872915806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14452,7 +14603,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1887107452
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14657,7 +14808,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1902689656
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14738,7 +14889,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1903835565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15087,13 +15238,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 8
     name: m8
+    Hamsay:
+    - {fileID: 1502741361}
+    - {fileID: 1566475789}
+    - {fileID: 1812267326}
+    - {fileID: 1238897872}
     continent: 0
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -15258,13 +15415,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 13
     name: m13
+    Hamsay:
+    - {fileID: 1184799136}
+    - {fileID: 366004943}
     continent: 1
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -15414,13 +15575,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 30
     name: m30
+    Hamsay: []
     continent: 5
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -15575,13 +15738,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 24
     name: m24
+    Hamsay:
+    - {fileID: 2068557056}
+    - {fileID: 1109965966}
+    - {fileID: 174520423}
     continent: 4
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -15610,7 +15778,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2002523094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15940,13 +16108,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 10
     name: m10
+    Hamsay:
+    - {fileID: 1238897872}
+    - {fileID: 1184799136}
+    - {fileID: 366004943}
     continent: 1
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -15985,7 +16158,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 18c6d19e2afcd1147bcffc95982e64d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: []
+  player:
+  - armyCount: 0
+    armyText: {fileID: 1902689657}
+  - armyCount: 0
+    armyText: {fileID: 1537286187}
+  - armyCount: 0
+    armyText: {fileID: 1438263097}
+  - armyCount: 0
+    armyText: {fileID: 1714457522}
   phase: 1
   playerTurnText: {fileID: 87504577}
 --- !u!4 &2059891056
@@ -16021,7 +16202,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2067473568
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16366,13 +16547,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 21
     name: m21
+    Hamsay:
+    - {fileID: 366004943}
+    - {fileID: 1381237549}
+    - {fileID: 75471480}
+    - {fileID: 1109965966}
+    - {fileID: 1960839837}
+    - {fileID: 213788512}
     continent: 4
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -16571,13 +16760,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   country:
+    M_ID: 17
     name: m17
+    Hamsay:
+    - {fileID: 1286940192}
+    - {fileID: 245011808}
+    - {fileID: 213788512}
+    - {fileID: 1410041488}
+    - {fileID: 1181607515}
+    - {fileID: 1126256928}
     continent: 3
     tribe: 0
     moneyreward: 0
     expreward: 0
     army: 0
-    player: 0
+    playerID: 0
   oldColor:
     serializedVersion: 2
     rgba: 6219234
@@ -16606,7 +16803,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2074220819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16889,7 +17086,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2129853270
 RectTransform:
   m_ObjectHideFlags: 0
