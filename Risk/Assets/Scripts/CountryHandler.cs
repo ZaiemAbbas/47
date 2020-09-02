@@ -18,6 +18,18 @@ public class CountryHandler : MonoBehaviour
     //    sprite.color = startColor;
     }
 
+    public void AIInput(int AIIndex)
+    {
+        if (GameplayManager.Instance.phase == 1 && selected == false)
+        {
+            Country countryObj = OnGetTribe(AIIndex);
+            AssignColor(countryObj);
+            selected = true;
+            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1f));
+            GameplayManager.Instance.RemoveLands();
+        }
+    }
+
     private void OnMouseDown()
     {
         //if (selected == true)
@@ -28,6 +40,9 @@ public class CountryHandler : MonoBehaviour
             Country countryObj = OnGetTribe(GameplayManager.Instance.Phase1Turn());
             AssignColor(countryObj);
             selected = true;
+            Map.Instance.PlayerMapPick(this);
+            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
+            GameplayManager.Instance.RemoveLands();
         }
 
         if (GameplayManager.Instance.phase == 2)

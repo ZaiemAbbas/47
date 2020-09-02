@@ -53,7 +53,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\AI.cs" />
+     <Compile Include="Assets\Scripts\AI_Handler.cs" />
      <Compile Include="Assets\Scripts\Country.cs" />
      <Compile Include="Assets\Scripts\CountryHandler.cs" />
      <Compile Include="Assets\Scripts\CountryManager.cs" />

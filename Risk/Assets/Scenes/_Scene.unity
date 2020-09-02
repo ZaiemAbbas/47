@@ -393,14 +393,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 45233079}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.008123248, w: -0.999967}
   m_LocalPosition: {x: 5.173727, y: 2.5434365, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 978601457}
   m_Father: {fileID: 89722330}
   m_RootOrder: 40
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -0.93100005}
 --- !u!60 &45233082
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -494,7 +494,11 @@ MonoBehaviour:
   country:
     M_ID: 41
     name: m41
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1751653864}
+    - {fileID: 672405908}
+    - {fileID: 673048698}
+    - {fileID: 1742130096}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -874,7 +878,12 @@ MonoBehaviour:
   country:
     M_ID: 40
     name: m40
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1282710963}
+    - {fileID: 896635890}
+    - {fileID: 673048698}
+    - {fileID: 45233083}
+    - {fileID: 1742130096}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -2504,7 +2513,9 @@ MonoBehaviour:
   country:
     M_ID: 32
     name: m32
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1838834331}
+    - {fileID: 1202088470}
     continent: 5
     tribe: 0
     moneyreward: 0
@@ -2665,7 +2676,11 @@ MonoBehaviour:
   country:
     M_ID: 29
     name: m29
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1745577027}
+    - {fileID: 1960464856}
+    - {fileID: 1838834331}
+    - {fileID: 1282710963}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -4694,7 +4709,10 @@ MonoBehaviour:
   country:
     M_ID: 38
     name: m38
-    Hamsay: []
+    Hamsay:
+    - {fileID: 896635890}
+    - {fileID: 673048698}
+    - {fileID: 45233083}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -4860,7 +4878,11 @@ MonoBehaviour:
   country:
     M_ID: 39
     name: m39
-    Hamsay: []
+    Hamsay:
+    - {fileID: 896635890}
+    - {fileID: 672405908}
+    - {fileID: 61175678}
+    - {fileID: 45233083}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -6372,7 +6394,12 @@ MonoBehaviour:
   country:
     M_ID: 37
     name: m37
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1282710963}
+    - {fileID: 1126256928}
+    - {fileID: 672405908}
+    - {fileID: 673048698}
+    - {fileID: 61175678}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -8440,7 +8467,11 @@ MonoBehaviour:
   country:
     M_ID: 36
     name: m36
-    Hamsay: []
+    Hamsay:
+    - {fileID: 2073315371}
+    - {fileID: 1181607515}
+    - {fileID: 1282710963}
+    - {fileID: 896635890}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -8781,7 +8812,12 @@ MonoBehaviour:
   country:
     M_ID: 34
     name: m34
-    Hamsay: []
+    Hamsay:
+    - {fileID: 2073315371}
+    - {fileID: 1410041488}
+    - {fileID: 1745577027}
+    - {fileID: 1282710963}
+    - {fileID: 1126256928}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -9119,7 +9155,9 @@ MonoBehaviour:
   country:
     M_ID: 33
     name: m33
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1960464856}
+    - {fileID: 247838137}
     continent: 5
     tribe: 0
     moneyreward: 0
@@ -9676,7 +9714,13 @@ MonoBehaviour:
   country:
     M_ID: 35
     name: m35
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1745577027}
+    - {fileID: 281174417}
+    - {fileID: 1181607515}
+    - {fileID: 1126256928}
+    - {fileID: 896635890}
+    - {fileID: 61175678}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -11098,7 +11142,13 @@ MonoBehaviour:
   country:
     M_ID: 27
     name: m27
-    Hamsay: []
+    Hamsay:
+    - {fileID: 2073315371}
+    - {fileID: 213788512}
+    - {fileID: 75471480}
+    - {fileID: 1109965966}
+    - {fileID: 1745577027}
+    - {fileID: 1181607515}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -11193,6 +11243,92 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1438263095}
   m_CullTransparentMesh: 0
+--- !u!1 &1450559966
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1450559968}
+  - component: {fileID: 1450559967}
+  m_Layer: 0
+  m_Name: CountryList
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1450559967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450559966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e98dc36f5f01513498c3bf64da378d2c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  handler_pack:
+  - {fileID: 1751653864}
+  - {fileID: 1367496560}
+  - {fileID: 1364596279}
+  - {fileID: 1502741361}
+  - {fileID: 1566475789}
+  - {fileID: 1812267326}
+  - {fileID: 1103656301}
+  - {fileID: 1916736147}
+  - {fileID: 1238897872}
+  - {fileID: 2014009616}
+  - {fileID: 1184799136}
+  - {fileID: 366004943}
+  - {fileID: 1927416670}
+  - {fileID: 1323796890}
+  - {fileID: 1178244616}
+  - {fileID: 1286940192}
+  - {fileID: 2073315371}
+  - {fileID: 245011808}
+  - {fileID: 1381237549}
+  - {fileID: 213788512}
+  - {fileID: 2068557056}
+  - {fileID: 75471480}
+  - {fileID: 1109965966}
+  - {fileID: 1960839837}
+  - {fileID: 174520423}
+  - {fileID: 1731067809}
+  - {fileID: 1410041488}
+  - {fileID: 1745577027}
+  - {fileID: 281174417}
+  - {fileID: 1960464856}
+  - {fileID: 1838834331}
+  - {fileID: 247838137}
+  - {fileID: 1202088470}
+  - {fileID: 1181607515}
+  - {fileID: 1282710963}
+  - {fileID: 1126256928}
+  - {fileID: 896635890}
+  - {fileID: 672405908}
+  - {fileID: 673048698}
+  - {fileID: 61175678}
+  - {fileID: 45233083}
+  - {fileID: 1742130096}
+--- !u!4 &1450559968
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1450559966}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5587709, y: -0.33234966, z: 0.5057315}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1478219561
 GameObject:
   m_ObjectHideFlags: 0
@@ -12948,7 +13084,9 @@ MonoBehaviour:
   country:
     M_ID: 42
     name: m42
-    Hamsay: []
+    Hamsay:
+    - {fileID: 45233083}
+    - {fileID: 45233083}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -13123,7 +13261,11 @@ MonoBehaviour:
   country:
     M_ID: 28
     name: m28
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1410041488}
+    - {fileID: 281174417}
+    - {fileID: 1181607515}
+    - {fileID: 1282710963}
     continent: 2
     tribe: 0
     moneyreward: 0
@@ -14361,7 +14503,10 @@ MonoBehaviour:
   country:
     M_ID: 31
     name: m31
-    Hamsay: []
+    Hamsay:
+    - {fileID: 281174417}
+    - {fileID: 1960464856}
+    - {fileID: 247838137}
     continent: 5
     tribe: 0
     moneyreward: 0
@@ -15577,7 +15722,9 @@ MonoBehaviour:
   country:
     M_ID: 30
     name: m30
-    Hamsay: []
+    Hamsay:
+    - {fileID: 1838834331}
+    - {fileID: 1202088470}
     continent: 5
     tribe: 0
     moneyreward: 0
@@ -16139,6 +16286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2059891056}
   - component: {fileID: 2059891055}
+  - component: {fileID: 2059891057}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -16183,6 +16331,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2059891057
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2059891054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37a45f6cc82c37344b878bd4697b89b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2067473567
 GameObject:
   m_ObjectHideFlags: 0
