@@ -10,8 +10,8 @@ public class CountryHandler : MonoBehaviour
     public Country country;
     private SpriteRenderer sprite;
     public Color32 oldColor, startColor, hoverColor;
-
     private bool selected = false;
+    //-----------------------------------------------------------------------//
     void Awake()
     {
         sprite = GetComponent<SpriteRenderer>();
@@ -22,12 +22,32 @@ public class CountryHandler : MonoBehaviour
     {
         if (GameplayManager.Instance.phase == 1 && selected == false)
         {
+            /////------AI Handling Phase 1 (Distribution of Lands)
             Country countryObj = OnGetTribe(AIIndex);
             AssignColor(countryObj);
             selected = true;
             GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1f));
             GameplayManager.Instance.RemoveLands();
         }
+        else if(GameplayManager.Instance.phase==2 )
+        {
+            /////------AI Handling Phase 2 (Distribution of army)
+            if (GameplayManager.Instance.phase == 2)
+            {
+                if (GameplayManager.Instance.GetCurrentPlayer() != country.playerID)
+                    return;
+
+                country.army++;
+
+                GameplayManager.Instance.Phase2Turn();
+
+                if (GetComponentInChildren<TextMeshPro>())
+                    GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
+
+                GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
+            }
+        }
+
     }
 
     private void OnMouseDown()
@@ -56,6 +76,8 @@ public class CountryHandler : MonoBehaviour
 
             if (GetComponentInChildren<TextMeshPro>())
                 GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
+
+            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
         }
     }
 
@@ -101,11 +123,11 @@ public class CountryHandler : MonoBehaviour
         }
     }
 
-    void OnDrawGizmos()
-    {
-        country.name = this.name;
-        this.tag = "Country";
-    }
+    //void OnDrawGizmos()
+    //{
+    //    country.name = this.name;
+    //    this.tag = "Country";
+    //}
     public void TintColor(Color32 c)
     {
         sprite.color = c;

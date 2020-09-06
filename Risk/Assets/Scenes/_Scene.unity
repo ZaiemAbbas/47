@@ -131,7 +131,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &32196597
 RectTransform:
   m_ObjectHideFlags: 0
@@ -501,8 +501,6 @@ MonoBehaviour:
     - {fileID: 1742130096}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -533,7 +531,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &45364023
 RectTransform:
   m_ObjectHideFlags: 0
@@ -886,8 +884,6 @@ MonoBehaviour:
     - {fileID: 1742130096}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -1047,8 +1043,6 @@ MonoBehaviour:
     - {fileID: 1410041488}
     continent: 4
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -1232,7 +1226,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &105780293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1439,7 +1433,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &107712806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1646,7 +1640,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &133335322
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1663,7 +1657,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 9.96, y: -2.3100002}
+  m_AnchoredPosition: {x: 9.9, y: -2.18}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &133335323
@@ -2000,8 +1994,6 @@ MonoBehaviour:
     - {fileID: 1731067809}
     continent: 4
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -2182,8 +2174,6 @@ MonoBehaviour:
     - {fileID: 1410041488}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -2348,8 +2338,6 @@ MonoBehaviour:
     - {fileID: 213788512}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -2518,8 +2506,6 @@ MonoBehaviour:
     - {fileID: 1202088470}
     continent: 5
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -2683,8 +2669,6 @@ MonoBehaviour:
     - {fileID: 1282710963}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -2715,7 +2699,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &284439664
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2922,7 +2906,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &295836430
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3286,8 +3270,6 @@ MonoBehaviour:
     - {fileID: 2068557056}
     continent: 1
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -3318,7 +3300,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &373061101
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3525,7 +3507,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &420175556
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3732,7 +3714,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &458359332
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4079,7 +4061,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &509439133
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4368,7 +4350,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &639729931
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4715,8 +4697,6 @@ MonoBehaviour:
     - {fileID: 45233083}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -4885,8 +4865,6 @@ MonoBehaviour:
     - {fileID: 45233083}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -4917,7 +4895,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &690112310
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5124,7 +5102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &769176503
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5331,7 +5309,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &769586293
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5538,7 +5516,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &778089460
 RectTransform:
   m_ObjectHideFlags: 0
@@ -5745,7 +5723,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &816253357
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6031,7 +6009,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &860734760
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6402,8 +6380,6 @@ MonoBehaviour:
     - {fileID: 61175678}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -6513,7 +6489,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &939809306
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6720,7 +6696,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &978601457
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6927,7 +6903,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1033738168
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7134,7 +7110,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1061007366
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7341,7 +7317,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1083714587
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7548,7 +7524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1099492015
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7910,8 +7886,6 @@ MonoBehaviour:
     - {fileID: 1323796890}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -8087,8 +8061,6 @@ MonoBehaviour:
     - {fileID: 1410041488}
     continent: 4
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -8119,7 +8091,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1123257714
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8474,8 +8446,6 @@ MonoBehaviour:
     - {fileID: 896635890}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -8649,8 +8619,6 @@ MonoBehaviour:
     - {fileID: 1381237549}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -8820,8 +8788,6 @@ MonoBehaviour:
     - {fileID: 1126256928}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -8992,8 +8958,6 @@ MonoBehaviour:
     - {fileID: 1927416670}
     continent: 1
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -9160,8 +9124,6 @@ MonoBehaviour:
     - {fileID: 247838137}
     continent: 5
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -9192,7 +9154,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1235209368
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9539,8 +9501,6 @@ MonoBehaviour:
     - {fileID: 2014009616}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -9723,8 +9683,6 @@ MonoBehaviour:
     - {fileID: 61175678}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -9895,8 +9853,6 @@ MonoBehaviour:
     - {fileID: 245011808}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -10049,8 +10005,6 @@ MonoBehaviour:
     - {fileID: 1178244616}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -10081,7 +10035,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1337088283
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10288,7 +10242,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1354026342
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10615,8 +10569,6 @@ MonoBehaviour:
     - {fileID: 1566475789}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -10786,8 +10738,6 @@ MonoBehaviour:
     - {fileID: 1103656301}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -10958,8 +10908,6 @@ MonoBehaviour:
     - {fileID: 213788512}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -11151,8 +11099,6 @@ MonoBehaviour:
     - {fileID: 1181607515}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -11348,7 +11294,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1478219562
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11680,8 +11626,6 @@ MonoBehaviour:
     - {fileID: 1238897872}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -11712,7 +11656,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1506031997
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12041,7 +11985,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1543667295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12276,8 +12220,6 @@ MonoBehaviour:
     - {fileID: 1916736147}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -12308,7 +12250,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1679592423
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12515,7 +12457,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1695916106
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12923,8 +12865,6 @@ MonoBehaviour:
     - {fileID: 174520423}
     continent: 4
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -13089,8 +13029,6 @@ MonoBehaviour:
     - {fileID: 45233083}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -13268,8 +13206,6 @@ MonoBehaviour:
     - {fileID: 1282710963}
     continent: 2
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -13441,8 +13377,6 @@ MonoBehaviour:
     - {fileID: 45233083}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -13473,7 +13407,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1756171490
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13759,7 +13693,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1775462619
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13966,7 +13900,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1802734104
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14320,8 +14254,6 @@ MonoBehaviour:
     - {fileID: 1916736147}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -14509,8 +14441,6 @@ MonoBehaviour:
     - {fileID: 247838137}
     continent: 5
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -14541,7 +14471,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1872915806
 RectTransform:
   m_ObjectHideFlags: 0
@@ -14748,7 +14678,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1887107452
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15034,7 +14964,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1903835565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -15392,8 +15322,6 @@ MonoBehaviour:
     - {fileID: 1238897872}
     continent: 0
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -15567,8 +15495,6 @@ MonoBehaviour:
     - {fileID: 366004943}
     continent: 1
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -15727,8 +15653,6 @@ MonoBehaviour:
     - {fileID: 1202088470}
     continent: 5
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -15893,8 +15817,6 @@ MonoBehaviour:
     - {fileID: 174520423}
     continent: 4
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -15925,7 +15847,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2002523094
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16263,8 +16185,6 @@ MonoBehaviour:
     - {fileID: 366004943}
     continent: 1
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -16362,7 +16282,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2067473568
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16718,8 +16638,6 @@ MonoBehaviour:
     - {fileID: 213788512}
     continent: 4
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -16931,8 +16849,6 @@ MonoBehaviour:
     - {fileID: 1126256928}
     continent: 3
     tribe: 0
-    moneyreward: 0
-    expreward: 0
     army: 0
     playerID: 0
   oldColor:
@@ -16963,7 +16879,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2074220819
 RectTransform:
   m_ObjectHideFlags: 0
@@ -17246,7 +17162,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2129853270
 RectTransform:
   m_ObjectHideFlags: 0

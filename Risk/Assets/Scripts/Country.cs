@@ -21,7 +21,6 @@ public class Country
         Africa,
         Australia
     }
-
     public enum theTribes
     {
         none,
@@ -30,12 +29,10 @@ public class Country
         HariSingh,
         LionHeart
     }
-
-
     public thecontinent continent;
     public theTribes tribe;
-    public int moneyreward;
-    public int expreward;
+   // public int moneyreward;
+    //public int expreward;
     public int army = 0;
     public int playerID = 0;
 }

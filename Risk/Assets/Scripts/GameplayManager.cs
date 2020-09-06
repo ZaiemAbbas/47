@@ -63,10 +63,7 @@ public class GameplayManager : MonoBehaviour
 
     public void Phase2Turn()
     {
-        if (playerTurn >= 4)
-            playerTurn = 1;
-        else
-            playerTurn++;
+        playerTurn = 1;
     }
 
     public int GetCurrentPlayer()
@@ -100,6 +97,7 @@ public class GameplayManager : MonoBehaviour
 
     public void AITurn()
     {
-        GetComponent<AI_Handler>().AITurn();
+        if(phase == 1)
+            GetComponent<AI_Handler>().AITurn();
     }
 }
