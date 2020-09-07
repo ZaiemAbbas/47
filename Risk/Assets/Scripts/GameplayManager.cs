@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class GameplayManager : MonoBehaviour
 {
     public static GameplayManager Instance;
-
     public Player[] player;
 
     [HideInInspector]
