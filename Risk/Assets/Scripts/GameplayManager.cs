@@ -11,9 +11,12 @@ public class GameplayManager : MonoBehaviour
     [HideInInspector]
     public int phase = 1;
 
+    [HideInInspector]
+    public bool isPlayerInput = false;
+
     private int playerTurn = 0;
 
-    private int remainingLands = 42;
+    private int remainingLands = 40;
 
     [System.Serializable]
     public struct Player
@@ -31,34 +34,35 @@ public class GameplayManager : MonoBehaviour
         Instance = this;
         phase = 1;
         playerTurnText.text = "1";
+        isPlayerInput = true;
     }
 
-    public int Phase1Turn()
-    {
-        playerTurn = 1;
+    //public int Phase1Turn()
+    //{
+    //    playerTurn = 1;
 
-        //if (playerTurn >= 4)
-        //    playerTurn = 1;
-        //else
-        //    playerTurn++;
+    //    //if (playerTurn >= 4)
+    //    //    playerTurn = 1;
+    //    //else
+    //    //    playerTurn++;
 
-        playerTurnText.text = (playerTurn+1).ToString();
+    //    playerTurnText.text = (playerTurn+1).ToString();
 
-        if (phase == 1)
-        {
-            // Entring to phase 2
-            if (remainingLands <= 0)
-            {
-                phase = 2;
+    //    if (phase == 1)
+    //    {
+    //        // Entring to phase 2
+    //        if (remainingLands <= 0)
+    //        {
+    //            phase = 2;
+    //            isPlayerInput = true;
+    //            //  Function to assign total army to all players
+    //            SetPlayerArmy();
+    //        }
 
-                //  Function to assign total army to all players
-                SetPlayerArmy();
-            }
+    //    }
 
-        }
-
-        return playerTurn;
-    }
+    //    return playerTurn;
+    //}
 
     public void Phase2Turn()
     {
@@ -83,10 +87,13 @@ public class GameplayManager : MonoBehaviour
 
     public void RemoveLands()
     {
-        if (remainingLands == 0)
+        if (remainingLands <= 0)
+        {
             phase = 2;
+            isPlayerInput = true;
+        }
         else
-        remainingLands--;
+            remainingLands--;
     }
 
     public int GetPlayerArmy()
@@ -96,7 +103,6 @@ public class GameplayManager : MonoBehaviour
 
     public void AITurn()
     {
-        if(phase == 1)
-            GetComponent<AI_Handler>().AITurn();
+        GetComponent<AI_Handler>().AITurn(phase);
     }
 }

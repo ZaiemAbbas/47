@@ -18,12 +18,13 @@ public class CountryHandler : MonoBehaviour
     //    sprite.color = startColor;
     }
 
-    public void AIInput(int AIIndex)
+    public void AIInput(int AIIndex, AI_Handler ai)
     {
         if (GameplayManager.Instance.phase == 1 && selected == false)
         {
             /////------AI Handling Phase 1 (Distribution of Lands)
             Country countryObj = OnGetTribe(AIIndex);
+            countryObj.playerID = AIIndex;
             AssignColor(countryObj);
             selected = true;
             GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1f));
@@ -34,17 +35,13 @@ public class CountryHandler : MonoBehaviour
             /////------AI Handling Phase 2 (Distribution of army)
             if (GameplayManager.Instance.phase == 2)
             {
-                if (GameplayManager.Instance.GetCurrentPlayer() != country.playerID)
-                    return;
-
                 country.army++;
-
-                GameplayManager.Instance.Phase2Turn();
+                //-----------------army--()
 
                 if (GetComponentInChildren<TextMeshPro>())
                     GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
 
-                GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
+                GameplayManager.Instance.Invoke("AITurn", Random.Range(0.2f, 0.5f));
             }
         }
 
@@ -55,24 +52,27 @@ public class CountryHandler : MonoBehaviour
         //if (selected == true)
         //    return;
 
-        if(GameplayManager.Instance.phase == 1 && selected == false)
+        if(GameplayManager.Instance.phase == 1 && selected == false && GameplayManager.Instance.isPlayerInput == true)
         {
-            Country countryObj = OnGetTribe(GameplayManager.Instance.Phase1Turn());
+            GameplayManager.Instance.isPlayerInput = false;
+            Country countryObj = OnGetTribe(1);
+            countryObj.playerID = 1;
             AssignColor(countryObj);
             selected = true;
             Map.Instance.PlayerMapPick(this);
-            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
+            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.2f, 0.5f));
             GameplayManager.Instance.RemoveLands();
+            SoundManagerScript.SoundInstance.PlayBoom();
         }
 
-        if (GameplayManager.Instance.phase == 2)
+        if (GameplayManager.Instance.phase == 2 && GameplayManager.Instance.isPlayerInput == true)
         {
             if (GameplayManager.Instance.GetCurrentPlayer() != country.playerID)
                 return;
 
             country.army++;
 
-            GameplayManager.Instance.Phase2Turn();
+     //       GameplayManager.Instance.Phase2Turn();
 
             if (GetComponentInChildren<TextMeshPro>())
                 GetComponentInChildren<TextMeshPro>().text = country.army.ToString();

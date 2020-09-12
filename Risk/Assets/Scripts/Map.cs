@@ -8,7 +8,6 @@ public class Map : MonoBehaviour
 
     //private int[][] themaps;
     public List<CountryHandler> handler_pack;
-    private int remainingLands = 40;
 
 
     //---
@@ -19,26 +18,21 @@ public class Map : MonoBehaviour
         r = Random.Range(0, handler_pack.Count-1);
         ctr=handler_pack[r];
         handler_pack.RemoveAt(r);
-        //if(handler_pack.Count == 0)
-        //{
+       
+
+ //       GameplayManager.Instance.RemoveLands();
+        //if (remainingLands <= 0)
         //    GameplayManager.Instance.phase = 2;
-        //}
-        remainingLands--;
-        if (remainingLands <= 0)
-            GameplayManager.Instance.phase = 2;
         return ctr;
     }
     public void PlayerMapPick(CountryHandler plr)
     {
         handler_pack.Remove(plr);
-        remainingLands--;
-        if (remainingLands == 0)
-            GameplayManager.Instance.phase = 2;
-
-        //if (handler_pack.Count == 0)
-        //{
+  //      GameplayManager.Instance.RemoveLands();
+        //remainingLands--;
+        //if (remainingLands == 0)
         //    GameplayManager.Instance.phase = 2;
-        //}
+
     }
     void Awake()
     {
