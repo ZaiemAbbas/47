@@ -27,8 +27,8 @@ public class CountryHandler : MonoBehaviour
             countryObj.playerID = AIIndex;
             AssignColor(countryObj);
             selected = true;
-            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1f));
             GameplayManager.Instance.RemoveLands();
+            GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1f));
         }
         else if(GameplayManager.Instance.phase==2 )
         {
@@ -71,6 +71,7 @@ public class CountryHandler : MonoBehaviour
                 return;
 
             country.army++;
+            GameplayManager.Instance.ReduceArmy();
 
      //       GameplayManager.Instance.Phase2Turn();
 
@@ -78,6 +79,7 @@ public class CountryHandler : MonoBehaviour
                 GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
 
             GameplayManager.Instance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
+            SoundManagerScript.SoundInstance.PlaySword();
         }
     }
 

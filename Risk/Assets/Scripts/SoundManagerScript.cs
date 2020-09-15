@@ -6,29 +6,40 @@ public class SoundManagerScript : MonoBehaviour
 {
     public static SoundManagerScript SoundInstance;
     public List<AudioClip> Sounds;
-    public static AudioClip sword,boom;
+    public List<AudioClip> MainSounds;
     static AudioSource audiosrc;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         audiosrc = GetComponent<AudioSource>();
-        audiosrc.PlayOneShot(Sounds[0]);
-        boom = Sounds[1];
+        SoundInstance = this;
+      //  BackMusic();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
     public void PlaySword()
     {
-        audiosrc.PlayOneShot(Sounds[0]);
+        audiosrc.PlayOneShot(Sounds[4],0.7f);
     }
     public void PlayBoom()
     {
-        print("I am Here in PlayBoom");
-        //audiosrc.PlayOneShot(Sounds[1]);
-        audiosrc.PlayOneShot(boom);
+        audiosrc.PlayOneShot(Sounds[5], 0.7f);
+    }
+    public void DiceRoll()
+    {
+        audiosrc.PlayOneShot(Sounds[6], 0.7f);
+    }
+    public void BackMusic()
+    {
+        audiosrc.PlayOneShot(Sounds[1], 0.8f);
+    }
+    public void MainMenuMusic(bool t)
+    {
+        if (t)
+        {
+            audiosrc.PlayOneShot(Sounds[3]);
+           
+        }
+        else
+            audiosrc.Stop();
     }
 }
