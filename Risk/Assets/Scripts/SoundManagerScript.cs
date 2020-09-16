@@ -30,7 +30,7 @@ public class SoundManagerScript : MonoBehaviour
     }
     public void BackMusic()
     {
-        audiosrc.PlayOneShot(Sounds[1], 0.8f);
+        audiosrc.PlayOneShot(Sounds[1], 0.7f);
     }
     public void MainMenuMusic(bool t)
     {

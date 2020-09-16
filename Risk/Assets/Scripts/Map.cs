@@ -8,6 +8,7 @@ public class Map : MonoBehaviour
 
     //private int[][] themaps;
     public List<CountryHandler> handler_pack;
+    private List<CountryHandler> storedCountries;
 
 
     //---
@@ -37,6 +38,15 @@ public class Map : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        storedCountries = new List<CountryHandler>();
+
+        foreach (CountryHandler ch in handler_pack)
+            storedCountries.Add(ch);
+    }
+
+    void Start()
+    {
+        DisableArmyCount();
     }
 
     //private void AddHandlers()
@@ -64,5 +74,19 @@ public class Map : MonoBehaviour
 
     }
 
+    public void DisableArmyCount()
+    {
+        foreach (CountryHandler obj in storedCountries)
+        {
+            obj.GetComponentInChildren<TMPro.TextMeshPro>().enabled = false;
+        }
+    }
 
+    public void EnableArmyCount()
+    {
+        foreach (CountryHandler obj in storedCountries)
+        {
+            obj.GetComponentInChildren<TMPro.TextMeshPro>().enabled = true;
+        }
+    }
 }

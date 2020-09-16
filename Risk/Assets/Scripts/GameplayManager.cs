@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GameplayManager : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class GameplayManager : MonoBehaviour
     private int remainingLands = 42;
 
     private bool aiArmyDeployed = false;
+    private int moveArmyCount = 0;
+
+    private CountryHandler attackingCountry;
+    private CountryHandler victimCountry;
 
 
     [System.Serializable]
@@ -30,6 +35,16 @@ public class GameplayManager : MonoBehaviour
 
     [Header("UI")]
     public Text playerTurnText;
+    public DiceUI diceUI;
+    public GameObject movearmypannel;
+    public TextMeshProUGUI moveArmyText;
+
+    [System.Serializable]
+    public struct DiceUI
+    {
+        public GameObject dicePanel;
+        public GameObject[] diceButtons;
+    }
 
 
     void Awake()
@@ -71,6 +86,7 @@ public class GameplayManager : MonoBehaviour
         if (remainingLands <= 0)
         {
             phase = 2;
+            Map.Instance.EnableArmyCount();
             isPlayerInput = true;
         }
         else
@@ -93,6 +109,7 @@ public class GameplayManager : MonoBehaviour
         if (remainingLands < 1 && phase == 1)
         {
             phase = 2;
+            Map.Instance.EnableArmyCount();
             isPlayerInput = false;
         }
 
@@ -104,6 +121,7 @@ public class GameplayManager : MonoBehaviour
         if(playerArmy < 1 && aiArmyDeployed == true)
         {
             print("AttackPhaseInitialize");
+            phase = 3;
         }
     }
 
@@ -111,6 +129,78 @@ public class GameplayManager : MonoBehaviour
     {
         aiArmyDeployed = true;
     }
+
+    #region Attack Phase
+
+    public void OnReadyForAttack()
+    {
+        diceUI.dicePanel.SetActive(true);
+
+        for(int i=0; i < attackingCountry.country.army + 1; i++)
+        {
+            if (i > 3)
+                break;
+
+            diceUI.diceButtons[i].SetActive(true);
+        }
+    }
+
+    public void SetAttackingCountryPair(CountryHandler attacker, CountryHandler victim)
+    {
+        attackingCountry = attacker;
+        victimCountry = victim;
+    }
+
+    public CountryHandler GetAttackerCountry()
+    {
+        return attackingCountry;
+    }
+
+    public CountryHandler GetVictimCountry()
+    {
+        return victimCountry;
+    }
+
+    public void ClearAttackers()
+    {
+        attackingCountry = null;
+        victimCountry = null;
+    }
+
+    public void OnSelectDice(int army)
+    {
+        if(army > victimCountry.country.army)
+        {
+            victimCountry.CurrentCountryCaptured(1);
+            attackingCountry.CaptureCountrySuccessfull(army);
+        }
+        else
+        {
+            attackingCountry.CurrentCountryCaptured(victimCountry.country.playerID);
+            victimCountry.CaptureCountrySuccessfull(army);
+        }
+    }
+
+    #endregion Attack Phase
+
+    #region Move Army Phase
+
+    public void AddArmy()
+    {
+        moveArmyCount++;
+        moveArmyText.text = moveArmyCount.ToString();
+    }
+
+    public void SubtractArmy()
+    {
+        if (moveArmyCount < 1)
+            return;
+
+        moveArmyCount--;
+        moveArmyText.text = moveArmyCount.ToString();
+    }
+
+    #endregion Move Army Phase
 
     //-------ZOOM In Function-------
     public void ZoomIn(float inc)
