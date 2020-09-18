@@ -30,13 +30,19 @@ public class SoundManagerScript : MonoBehaviour
     }
     public void BackMusic()
     {
-        audiosrc.PlayOneShot(Sounds[1], 0.7f);
+        audiosrc.clip = Sounds[3];
+        audiosrc.volume = 0.7f;
+        audiosrc.loop = true;
+        audiosrc.Play();
     }
     public void MainMenuMusic(bool t)
     {
         if (t)
         {
-            audiosrc.PlayOneShot(Sounds[3]);
+            audiosrc.clip = Sounds[3];
+            audiosrc.loop = true;
+            audiosrc.Play();
+            //audiosrc.PlayOneShot(Sounds[3]);
            
         }
         else

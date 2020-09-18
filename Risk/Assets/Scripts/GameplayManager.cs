@@ -20,10 +20,16 @@ public class GameplayManager : MonoBehaviour
     private int remainingLands = 42;
 
     private bool aiArmyDeployed = false;
+    [HideInInspector]
+    public bool isInAttackingState = false;
+    [HideInInspector]
+    public bool isInMovingState = false;
     private int moveArmyCount = 0;
 
     private CountryHandler attackingCountry;
     private CountryHandler victimCountry;
+
+    private AI_Handler aiHandler;
 
 
     [System.Serializable]
@@ -34,10 +40,13 @@ public class GameplayManager : MonoBehaviour
     }
 
     [Header("UI")]
+    public Text messageText;
     public Text playerTurnText;
     public DiceUI diceUI;
     public GameObject movearmypannel;
     public TextMeshProUGUI moveArmyText;
+    public GameObject cancelBtn;
+    public GameObject stopBtn;
 
     [System.Serializable]
     public struct DiceUI
@@ -50,11 +59,18 @@ public class GameplayManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+        aiHandler = GetComponent<AI_Handler>();
         phase = 1;
         playerTurnText.text = "1";
         isPlayerInput = true;
         SoundManagerScript.SoundInstance.BackMusic();
     }
+
+    void Start()
+    {
+        UpdateMessage($" Your turn to choose a country");
+    }
+
     void Update()
     {
         if(Input.touchCount==2)
@@ -113,7 +129,7 @@ public class GameplayManager : MonoBehaviour
             isPlayerInput = false;
         }
 
-        GetComponent<AI_Handler>().AITurn(phase);
+        aiHandler.AITurn(phase);
     }
 
     public void AttackPhaseInitialize()
@@ -122,12 +138,18 @@ public class GameplayManager : MonoBehaviour
         {
             print("AttackPhaseInitialize");
             phase = 3;
+            UpdateMessage($"Attacking Phase Started");
         }
     }
 
     public void AIArmyDeployed()
     {
         aiArmyDeployed = true;
+    }
+
+    public void UpdateMessage(string msg)
+    {
+        messageText.text = msg;
     }
 
     #region Attack Phase
@@ -143,10 +165,40 @@ public class GameplayManager : MonoBehaviour
 
             diceUI.diceButtons[i].SetActive(true);
         }
+
+        UpdateMessage($" Your turn to start attack");
     }
 
-    public void SetAttackingCountryPair(CountryHandler attacker, CountryHandler victim)
+    private void StartAIAttack()
     {
+        cancelBtn.SetActive(false);
+        stopBtn.SetActive(false);
+        isPlayerInput = false;
+
+        print("Start AI Attack");
+        Invoke("AITurn", 2f);
+    }
+
+    public void SetAttackingCountryPair(CountryHandler attacker, CountryHandler victim, bool isAI = false)
+    {
+        if(victim == null)
+        {
+            UpdateMessage($"{attacker.country.tribe.ToString()} chose a territory to launch attack");
+        }
+        else
+        {
+            if (isAI == false)
+                isInAttackingState = true;
+
+            UpdateMessage($"{attacker.country.tribe.ToString()} is going to attack {victim.country.tribe.ToString()}");
+        }
+
+        if(isAI == false)
+        {
+            cancelBtn.SetActive(true);
+            stopBtn.SetActive(true);
+        }
+
         attackingCountry = attacker;
         victimCountry = victim;
     }
@@ -169,16 +221,61 @@ public class GameplayManager : MonoBehaviour
 
     public void OnSelectDice(int army)
     {
-        if(army > victimCountry.country.army)
+        if(attackingCountry.country.army > victimCountry.country.army)
         {
+            UpdateMessage($" Successfully captured {victimCountry.country.tribe.ToString()} territory");
+            aiHandler.AILoseTerritory(victimCountry);
             victimCountry.CurrentCountryCaptured(1);
             attackingCountry.CaptureCountrySuccessfull(army);
+            AllowMoveArmy();
+            isInAttackingState = false;
         }
         else
         {
-            attackingCountry.CurrentCountryCaptured(victimCountry.country.playerID);
-            victimCountry.CaptureCountrySuccessfull(army);
+            if(victimCountry.country.army >= attackingCountry.country.army)
+            {
+                UpdateMessage($" {victimCountry.country.tribe.ToString()} has captured your territory");
+                attackingCountry.CurrentCountryCaptured(victimCountry.country.playerID);
+                victimCountry.CaptureCountrySuccessfull(army);
+                isInAttackingState = false;
+
+                attackingCountry = null;
+                victimCountry = null;
+                ResetDice();
+
+                StartAIAttack();
+            }
+
         }
+    }
+
+    public void OnCancelAttack()
+    {
+        if(attackingCountry)
+            attackingCountry.CancelAttackHighlight();
+
+        if(victimCountry)
+            victimCountry.CancelAttackHighlight();
+
+        attackingCountry = null;
+        victimCountry = null;
+        isInAttackingState = false;
+        ResetDice();
+        cancelBtn.SetActive(false);
+    }
+
+    public void OnStopAttack()
+    {
+        OnCancelAttack();
+        StartAIAttack();
+    }
+
+    private void ResetDice()
+    {
+        diceUI.dicePanel.SetActive(false);
+
+        foreach (GameObject btn in diceUI.diceButtons)
+            btn.SetActive(false);
     }
 
     #endregion Attack Phase
@@ -187,6 +284,9 @@ public class GameplayManager : MonoBehaviour
 
     public void AddArmy()
     {
+        if (moveArmyCount >= attackingCountry.country.army)
+            return;
+
         moveArmyCount++;
         moveArmyText.text = moveArmyCount.ToString();
     }
@@ -198,6 +298,53 @@ public class GameplayManager : MonoBehaviour
 
         moveArmyCount--;
         moveArmyText.text = moveArmyCount.ToString();
+    }
+
+    private void AllowMoveArmy()
+    {
+        isInMovingState = true;
+        movearmypannel.SetActive(true);
+        diceUI.dicePanel.SetActive(false);
+        cancelBtn.SetActive(false);
+        stopBtn.SetActive(false);
+        UpdateMessage($" Ready to move army");
+    }
+
+    public void OnMoveArmy()
+    {
+        attackingCountry.SetArmy(attackingCountry.country.army - moveArmyCount);
+        victimCountry.SetArmy(moveArmyCount);
+        OnArmyMoved();
+    }
+
+    public void OnMoveArmy(bool isAI)
+    {
+        attackingCountry.SetArmy(attackingCountry.country.army - 1);
+        victimCountry.SetArmy(1);
+        OnArmyMoved(isAI);
+    }
+
+    private void OnArmyMoved(bool isAI = false)
+    {
+        if(isAI == false)
+        {
+            UpdateMessage($" {moveArmyCount} army moved to newly captured territory");
+            movearmypannel.SetActive(false);
+            attackingCountry = null;
+            victimCountry = null;
+            isInMovingState = false;
+            moveArmyCount = 0;
+            moveArmyText.text = moveArmyCount.ToString();
+
+            ResetDice();
+            cancelBtn.SetActive(false);
+            stopBtn.SetActive(true);
+        }
+        else
+        {
+            attackingCountry = null;
+            victimCountry = null;
+        }
     }
 
     #endregion Move Army Phase

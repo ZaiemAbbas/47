@@ -28,7 +28,7 @@ public class CountryHandler : MonoBehaviour
         gameplayInstance = GameplayManager.Instance;
     }
 
-    public void AIInput(int AIIndex, AI_Handler ai)
+    public void AIInput(int AIIndex, AI_Handler ai, int attackPhaseIndex = 0)
     {
         if (gameplayInstance.phase == 1 && selected == false)
         {
@@ -37,6 +37,7 @@ public class CountryHandler : MonoBehaviour
             countryObj.playerID = AIIndex;
             AssignColor(countryObj);
             selected = true;
+            gameplayInstance.UpdateMessage($" {country.tribe.ToString()}'s turn to choose a country");
             gameplayInstance.RemoveLands();
             gameplayInstance.Invoke("AITurn", Random.Range(0.01f, 0.02f));
         }
@@ -51,8 +52,30 @@ public class CountryHandler : MonoBehaviour
                 if (GetComponentInChildren<TextMeshPro>())
                     GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
 
+                gameplayInstance.UpdateMessage($" {country.tribe.ToString()}'s turn to deploy army");
                 gameplayInstance.Invoke("AITurn", Random.Range(0.01f, 0.02f));
             }
+        }
+        else if(gameplayInstance.phase == 3)
+        {
+            if (attackPhaseIndex == 1)
+            {
+                SelectHighlightCountry();
+                gameplayInstance.SetAttackingCountryPair(this, null, true);
+                attackPhaseIndex = 2;
+            }
+            else
+                if (attackPhaseIndex == 2)
+                {
+                    SelectHighlightCountry();
+                    gameplayInstance.SetAttackingCountryPair(gameplayInstance.GetAttackerCountry(), this, true);
+                    attackPhaseIndex = 1;
+                }
+            else
+                if(attackPhaseIndex == 3)
+                {
+                    
+                }
         }
 
     }
@@ -89,12 +112,18 @@ public class CountryHandler : MonoBehaviour
             gameplayInstance.Invoke("AITurn", Random.Range(0.5f, 1.0f));
             SoundManagerScript.SoundInstance.PlaySword();
         }
-
+        else
         if(gameplayInstance.phase == 3 && gameplayInstance.isPlayerInput == true && !isHighlited)
         {
+            if (gameplayInstance.isInAttackingState == true || gameplayInstance.isInMovingState == true)
+                return;
+
             if (gameplayInstance.GetCurrentPlayer() == country.playerID)
             {
                 if (gameplayInstance.GetAttackerCountry() != null)
+                    return;
+
+                if (country.army < 1)
                     return;
 
                 SelectHighlightCountry();
@@ -103,7 +132,7 @@ public class CountryHandler : MonoBehaviour
             }
             else
             {
-                if(CheckAdjacent() == true && gameplayInstance.GetAttackerCountry().country.army > country.army)
+                if(CheckAdjacent() == true /*&& gameplayInstance.GetAttackerCountry().country.army > country.army*/)
                 {
                     SelectHighlightCountry();
                     isHighlited = true;
@@ -111,7 +140,6 @@ public class CountryHandler : MonoBehaviour
                     gameplayInstance.OnReadyForAttack();
                 }
             }
-
         }
     }
 
@@ -169,7 +197,7 @@ public class CountryHandler : MonoBehaviour
     private bool CheckAdjacent()
     {
         CountryHandler attacker = gameplayInstance.GetAttackerCountry();
-
+        
         foreach(CountryHandler ctr in country.Hamsay)
         {
             if(attacker.name == ctr.name)
@@ -183,13 +211,12 @@ public class CountryHandler : MonoBehaviour
 
     public void CaptureCountrySuccessfull(int attackerArmy)
     {
-        country.army -= attackerArmy;
-
         if (GetComponentInChildren<TextMeshPro>())
             GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
 
         Country countryObj = OnGetTribe(country.playerID);
         AssignColor(countryObj);
+        isHighlited = false;
     }
 
     public void CurrentCountryCaptured(int id)
@@ -199,6 +226,23 @@ public class CountryHandler : MonoBehaviour
         AssignColor(countryObj);
 
         country.army = 0;
+
+        if (GetComponentInChildren<TextMeshPro>())
+            GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
+
+        isHighlited = false;
+    }
+
+    public void CancelAttackHighlight()
+    {
+        Country countryObj = OnGetTribe(country.playerID);
+        AssignColor(countryObj);
+        isHighlited = false;
+    }
+
+    public void SetArmy(int count)
+    {
+        country.army = count;
 
         if (GetComponentInChildren<TextMeshPro>())
             GetComponentInChildren<TextMeshPro>().text = country.army.ToString();
